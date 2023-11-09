@@ -48,8 +48,8 @@
 
 
   /* font sizes */
-  --fs-heading-main: 2rem;
-  --fs-heading-sub: 1.7;
+  --fs-heading-main: 2.2rem;
+  --fs-heading-sub: 1.3rem;
   --fs-content: clamp(1rem, 0.8502rem + 0.6148vw, 1.375rem);
   --fs-btn: 1.375rem;
   --fs-usp: clamp(1rem, 0.9501rem + 0.2049vw, 1.125rem);
@@ -135,7 +135,7 @@ body {
     place-items: center;
     min-width: 100vw;
     min-height: 100vh;
-    overflow: hidden;
+    
 
 }
 
@@ -146,7 +146,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
  
-  /* overflow: hidden; */
+  
 
 }
 

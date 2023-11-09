@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-import {Header} from './components';
+import {Header, About} from './components';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <Header/>
+      <About/>
     </>
   )
 }
