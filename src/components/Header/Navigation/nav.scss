@@ -1,0 +1,37 @@
+@import url("/src/index.css");
+
+nav {
+  display: flex;
+
+  width: 90%;
+  height: clamp(3rem, 2.6004rem + 1.6393vw, 4rem);
+  background: rgba(15, 29, 32, 0.1);
+  backdrop-filter: blur(6px);
+  padding: 0 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 50%;
+  transform: translateX(50%);
+  justify-content: space-around;
+
+  @media (min-width: 500px) {
+    width: 31rem;
+  }
+
+  & * {
+    font-size: clamp(1rem, 0.8801rem + 0.4918vw, 1.3rem);
+    font-family: var(--ff-bold);
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-link-container {
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+    &:hover {
+        border-bottom: 2px solid white;
+    }
+  }
+}
