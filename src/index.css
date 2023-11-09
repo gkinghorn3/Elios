@@ -1,0 +1,258 @@
+/*--------------------*/
+/* custom properties */
+/*--------------------*/
+
+@font-face {
+  font-family: 'CaviarDreams';
+  src: url('/src/assets/fonts/CaviarDreams.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'CaviarDreams_Bold';
+  src: url('/src/assets/fonts/CaviarDreams_Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'CaviarDreams_BoldItalic';
+  src: url('/src/assets/fonts/CaviarDreams_BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CaviarDreams_Italic';
+  src: url('/src/assets/fonts/CaviarDreams_Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'virginia-medium';
+  src: url('/src/assets/fonts/virginia-medium.ttf') format('truetype');
+  font-weight: medium;
+  
+}
+
+
+
+:root {
+  
+  /* colours */
+  --clr-dark: 192 31% 6%;
+  --clr-mid: 191 36% 9%;
+  --clr-light: 193 5% 36%;
+  --clr-highlight: 43 27% 50%;
+
+
+
+  /* font sizes */
+  --fs-heading-main: 2rem;
+  --fs-heading-sub: 1.7;
+  --fs-content: clamp(1rem, 0.8502rem + 0.6148vw, 1.375rem);
+  --fs-btn: 1.375rem;
+  --fs-usp: clamp(1rem, 0.9501rem + 0.2049vw, 1.125rem);
+
+  --fs-cocktail-heading: clamp(1.3125rem, 1.2875rem + 0.1025vw, 1.375rem);
+  --fs-cocktailspec: 1rem; 
+  --fs-cocktail-profile: clamp(1.125rem, 1.0751rem + 0.2049vw, 1.25rem);
+
+
+
+  /*font-families*/
+
+  --ff-regular: "CaviarDreams", sans-serif;
+  --ff-regular-alt: "virginia-medium", sans-serif;
+  --ff-bold: "CaviarDreams_Bold", sans-serif;
+  --ff-bold-italic: "CaviarDreams_BoldItalic", sans-serif;
+  --ff-italic: "CaviarDreams_Italic", sans-serif;
+
+
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+/*--------------------*/
+/* reset              */
+/*--------------------*/
+
+
+
+/* box sizing */
+*, 
+*::after, 
+*::before {
+  box-sizing: border-box;
+}
+
+/* reset margins */ 
+
+body, 
+h1, 
+h2, 
+h3, 
+h4,
+h5, 
+p,
+a, 
+figure, 
+picture {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+
+/* set body and root */
+
+
+
+body {
+    font-family: var(--ff-regular);
+    font-size: var(--fs-content);
+    color: white;
+    background-color: hsl( var(--clr-mid) );
+    line-height : 1.5;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    overflow: hidden;
+
+}
+
+
+/* set properties for background image container*/
+
+#bg-img-container {
+  background-size: cover;
+  height: 100%;
+}
+
+
+/* set image defaults*/ 
+
+img, 
+picture {
+    max-width: 100%; 
+    display: block;
+}
+
+/* remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+
+/* make form elements easier to work with */ 
+
+input, 
+button, 
+textarea, 
+select {
+    font: inherit;
+}
+
+/* remove animations for users who've turned them off */ 
+@media (prefers-reduced-motion: reduce) {  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+a {
+  text-decoration: none;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+  /* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+
+.flex {
+  display: flex;
+
+  
+  gap: var(--gap, 1rem);
+
+}
+
+.grid {
+  display: grid; 
+  gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+  
+}
+
+
+.container {
+  padding-inline: clamp(1rem, 0.6004rem + 1.6393vw, 2rem);
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+
+/* colours */
+
+.bg-dark { background-color: hsl( var(--clr-dark) );}
+.bg-accent { background-color: hsl( var(--clr-light) );}
+.bg-white { background-color: hsl( var(--clr-white) );}
+
+.text-dark { color: hsl( var(--clr-dark) );}
+.text-accent { color: hsl( var(--clr-light) );}
+.text-white { color: hsl( var(--clr-white) );}
+
+/* typography*/
+
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
