@@ -3,7 +3,7 @@ import "./about.scss";
 const About = () => {
   return (
     <section className=" about-container">
-      <div className="about-us-title">
+      <div className="section-titles">
         <h3>Our Story</h3>
         <h2>- ABOUT US -</h2>
       </div>
@@ -26,7 +26,13 @@ const About = () => {
           </p>
         </div>
         <div className="about-image-container">
-          <img src="/images/mural.webp" />
+     
+
+          <img src="/images/zombie1.webp" />
+       
+                <img src="/images/mural.webp" className='second-img'/>
+        
+    
         </div>
       </div>
     </section>
