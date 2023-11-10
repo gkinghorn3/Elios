@@ -1,96 +1,83 @@
 @import url(/src/index.scss);
 
 @mixin flex-column-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-
-  
-
-.about-container {
-    max-width: 63rem;
-    height:70rem;
-    margin: 0 auto;
-    margin-top: clamp(2rem, 0.8012rem + 4.918vw, 5rem);
-    @include flex-column-center;
-
-
-   
-
-    .about-content-container {
-        
-        display: flex;
-        align-items: center;
-        
-        margin-top: 8rem;
-        
-        
-
-        .about-content {
-            height: fit-content;
-            
-            flex-basis: 55%;
-            text-align: center;
-            font-size: var(--fs-content);
-            
-            
-        }
-
-        .about-image-container {
-            height: fit-content;
-            width: 100%;
-            position: relative;
-            flex-basis: 40%;
-            
-            margin-left: 3rem;
-           
-           
-            & * {
-                max-width: 400px;
-            }
-
-            .first-img {
-            
-                animation: wipe-down 2s ease-out forwards;
-            }
-
-
-            .second-img {
-                position: absolute;
-                top: -40px;
-                left: 60px;
-                clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
-               
-                animation: wipe-left 2s 1s ease-out forwards;
-            }
-        }
-
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.about-container {
+  max-width: 63rem;
+  height: 70rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  
+
+  .about-content-container {
+    @include flex-column-center;
+    gap: 3rem;
+    margin-top: 4rem;
+    
+    padding: 0 1rem;
+
+    .about-content {
+      order: 2;
+      height: fit-content;
+      flex-basis: 55%;
+      text-align: center;
+      font-size: var(--fs-content);
+    }
+
+    .about-image-container {
+      order: 1;
+      height: fit-content;
+
+      position: relative;
+      flex-basis: 40%;
+
+      & * {
+        max-width: 400px;
+      }
+
+      .first-img {
+        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+      }
+
+      .first-img-animation {
+        animation: wipe-down 1s ease-out 500ms forwards;
+      }
+
+      .second-img {
+        position: absolute;
+        top: -40px;
+        left: 60px;
+        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+      }
+
+      .second-img-animation {
+        animation: wipe-left 1s ease-out 1.5s forwards;
+      }
+    }
+  }
+}
 
 @keyframes wipe-down {
-    0% {
-        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
-    }
-    100% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 
 @keyframes wipe-left {
-    0% {
-        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-    }
-    100% {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
-
-
-
 
 // @keyframes fadeInDown {
 //     from {

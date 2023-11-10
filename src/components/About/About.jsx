@@ -1,6 +1,16 @@
+
+import { useInView } from 'react-intersection-observer';
+
+
 import "./about.scss";
 
 const About = () => {
+
+   const [ref, inView] = useInView({triggerOnce: true});
+   const [ref2, inView2] = useInView({triggerOnce: true});
+   
+
+   
   return (
     <section className=" about-container">
       <div className="section-titles">
@@ -26,9 +36,9 @@ const About = () => {
           </p>
         </div>
         <div className="about-image-container">
-          
-          <img src="/images/zombie1.webp" className="first-img" />
-          <img src="/images/mural.webp" className="second-img" />
+        
+          <img ref={ref} src="/images/zombie1.webp" className={`first-img ${inView ? 'first-img-animation' : ''}`}/>
+          <img ref={ref2} src="/images/mural.webp" className={`second-img ${inView2 ? 'second-img-animation' : ''}`} />
         </div>
       </div>
     </section>
