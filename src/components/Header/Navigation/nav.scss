@@ -2,7 +2,6 @@
 
 nav {
   display: flex;
-
   width: 90%;
   height: clamp(3rem, 2.6004rem + 1.6393vw, 4rem);
   background: rgba(15, 29, 32, 0.3);
@@ -13,6 +12,9 @@ nav {
   right: 50%;
   transform: translateX(50%);
   justify-content: space-around;
+
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  animation: wipe-left 3s ease-out forwards;
 
   @media (min-width: 500px) {
     width: 31rem;
@@ -37,5 +39,15 @@ nav {
     &:active {
         border-bottom: 2px solid white;
     }
+  }
+}
+
+
+@keyframes wipe-left {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
