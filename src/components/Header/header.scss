@@ -54,12 +54,17 @@ header {
 
 
   @keyframes fade-in-logo {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
+    0% {
+      
+      transform: translateY(-30px);
     }
 
-    to {
+    70% {
+      
+      transform: translateY(4px);
+    }
+
+    100% {
       opacity: 1;
       transform: translateY(0);
     }
