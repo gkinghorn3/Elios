@@ -12,27 +12,23 @@ const About = () => {
           <p>
             Established in 1978, under the original name ‘Madogs', our
             family-owned venue marks the very beginning of Edinburgh's cocktail
-            culture. 
+            culture.
             <br />
             <br />
             Over the years our bar has become something of a Scottish
             institution and has welcomed both royalty and renowned artists from
-            the likes of Princess Anne to 'The Temptations'. 
-            <br/ >
+            the likes of Princess Anne to 'The Temptations'.
             <br />
-            Now passed from
-            father to son, today, we proudly bear the name 'Elio's' in loving
-            memory of the man who brought warmth to every pour.
+            <br />
+            Now passed from father to son, today, we proudly bear the name
+            'Elio's' in loving memory of the man who brought warmth to every
+            pour.
           </p>
         </div>
         <div className="about-image-container">
-     
-
-          <img src="/images/zombie1.webp" />
-       
-                <img src="/images/mural.webp" className='second-img'/>
-        
-    
+          
+          <img src="/images/zombie1.webp" className="first-img" />
+          <img src="/images/mural.webp" className="second-img" />
         </div>
       </div>
     </section>
