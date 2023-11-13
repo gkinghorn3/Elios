@@ -1,0 +1,88 @@
+@import "/src/index.scss";
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-container {
+  @include flex-column-center;
+  max-width: 63rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+
+  .menu-image-container {
+    margin-top: 3rem;
+    height: fit-content;
+    position: relative;
+    flex-basis: 40%;
+    transform: translateX(10px);
+
+    & * {
+      max-width: clamp(12.5rem, 7.5051rem + 20.4918vw, 25rem);
+    }
+
+    .first-img {
+      clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+    }
+
+    .first-img-animation {
+      animation: wipe-right 1s ease-out 1.2s forwards;
+    }
+
+    .second-img {
+      position: absolute;
+      top: 40px;
+      left: -60px;
+      clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+    }
+
+    .second-img-animation {
+      animation: wipe-up 1s ease-out forwards;
+    }
+  }
+
+  .menu-cocktails-container {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr; 
+    row-gap: 1.6rem;
+    grid-auto-rows: fit-content;
+    
+  }
+  
+  @media (min-width: 768px) {
+    .menu-cocktails-container {
+      grid-template-columns: 1fr 1fr; 
+      gap: 2rem;
+    }
+  }
+
+    .cocktail-element {
+      
+
+      .title-price-row {
+        display: flex;
+        justify-content: space-between;
+        color: hsl(var(--clr-highlight));
+
+        h3 {
+          font-size: var(--fs-cocktail-heading);
+          font-family: var(--ff-bold);
+        }
+      }
+
+      .flavour-profile {
+        font-size: var(--fs-cocktail-profile);
+        font-family: var(--ff-italic);
+        opacity: 0.8;
+      }
+
+      .specs {
+        font-size: var(--ff-cocktail-spec);
+      }
+    }
+  
+
+}

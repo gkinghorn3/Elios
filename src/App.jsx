@@ -1,16 +1,17 @@
-import { useState } from 'react'
 
 
-import {Header, About, VenueSummary} from './components';
+
+import {Header, About, VenueSummary, Menu} from './components';
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
       <Header/>
       <About/>
       <VenueSummary />
+      <Menu />
     </>
   )
 }

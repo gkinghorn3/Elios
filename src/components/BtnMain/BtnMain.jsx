@@ -1,4 +1,4 @@
-import "./button.scss";
+import "./btn-main.scss";
 
 const BtnMain = ({ btnText, onClick, link, BtnType }) => {
   return (
