@@ -7,8 +7,9 @@
 }
 
 .about-container {
+  @include flex-column-center;
   max-width: 63rem;
-  height: 70rem;
+  height: fit-content;
   margin: 0 auto;
   margin-top: 3rem;
   
@@ -77,6 +78,11 @@
         animation: wipe-left 1s ease-out 1.2s forwards;
       }
     }
+  }
+
+  a {
+   
+    margin-top: clamp(2rem, 0.8012rem + 4.918vw, 5rem);
   }
 }
 

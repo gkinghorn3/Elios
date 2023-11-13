@@ -1,6 +1,8 @@
 
 import { useInView } from 'react-intersection-observer';
 
+import BtnMain from '../BtnMain/BtnMain';
+
 
 import "./about.scss";
 
@@ -41,6 +43,7 @@ const About = () => {
           <img ref={ref2} src="/images/mural.webp" className={`second-img ${inView2 ? 'second-img-animation' : ''}`} />
         </div>
       </div>
+      <BtnMain btnText="book now" link='https://elios.covergenie.uk/booking/elios-edinburgh' />
     </section>
   );
 };

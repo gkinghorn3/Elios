@@ -235,47 +235,7 @@ h1 {
 
 /* colours */
 
-.bg-dark {
-  background-color: hsl(var(--clr-dark));
-}
-.bg-accent {
-  background-color: hsl(var(--clr-light));
-}
-.bg-white {
-  background-color: hsl(var(--clr-white));
-}
 
-.text-dark {
-  color: hsl(var(--clr-dark));
-}
-.text-accent {
-  color: hsl(var(--clr-light));
-}
-.text-white {
-  color: hsl(var(--clr-white));
-}
-
-/* typography*/
-
-.ff-serif {
-  font-family: var(--ff-serif);
-}
-.ff-sans-cond {
-  font-family: var(--ff-sans-cond);
-}
-.ff-sans-normal {
-  font-family: var(--ff-sans-normal);
-}
-
-.letter-spacing-1 {
-  letter-spacing: 4.75px;
-}
-.letter-spacing-2 {
-  letter-spacing: 2.7px;
-}
-.letter-spacing-3 {
-  letter-spacing: 2.35px;
-}
 
 .uppercase {
   text-transform: uppercase;

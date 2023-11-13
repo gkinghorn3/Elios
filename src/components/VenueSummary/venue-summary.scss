@@ -1,0 +1,19 @@
+@import '/src/index.scss';
+
+.venue-summary-container {
+
+    background: hsl( var(--clr-dark) );
+    margin: 7rem 0;
+    height: 20rem;
+    width: 100%;
+    justify-content: space-around;
+    color: hsl( var(--clr-highlight) );
+    font-family: var(--ff-bold);
+
+    div {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

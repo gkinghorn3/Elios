@@ -1,0 +1,57 @@
+@import '/src/index.scss';
+
+.btn-main {
+    position: relative;
+    border: 5px solid hsl( var(--clr-highlight) );
+    color: hsl( var(--clr-highlight) );
+    font-family: var(--ff-bold) !important;
+    padding: 1rem 2rem;
+    z-index: 1;
+    overflow: hidden;
+
+
+    &:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 150%;
+		background: no-repeat 50% 0 linear-gradient(to right, transparent 0, hsl( var(--clr-highlight) /.8), transparent 82%, transparent 100%);
+		opacity: 0.7;
+		transform: skew(-45deg) translateX(-100%);
+	}
+	
+	& > span {
+		position: relative;
+		z-index: 1;
+	}
+	
+	&:hover,
+	&:focus
+    
+    {
+		text-decoration: none;
+
+		&::before {
+			animation-name: wipe-right;
+	   		animation-duration: 1.4s;
+		}
+	}
+
+
+  }
+  
+
+  @keyframes wipe-right {
+	
+	from {
+		transform: skew(-45deg) translateX(-150%);
+	}
+	to {
+		transform: skew(-45deg) translateX(150%);
+	}
+}
+
+
