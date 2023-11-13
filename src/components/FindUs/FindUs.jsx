@@ -7,6 +7,7 @@ import "./find-us.scss";
 const API_TOKEN = process.env.MAPS_API_TOKEN;
 
 const FindUs = () => {
+    const API_TOKEN = process.env.MAPS_API_TOKEN;
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: API_TOKEN,
     });
