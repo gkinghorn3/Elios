@@ -1,10 +1,14 @@
 import { GoogleMap, Marker, useLoadScript, InfoWindow } from "@react-google-maps/api";
 import { useMemo, useState } from "react";
+import dotenv from "dotenv";
 import "./find-us.scss";
+
+// 'AIzaSyAkJTESuAIN3p16GxMlglzIpLl6BYUWLgY'
+const API_TOKEN = process.env.MAPS_API_TOKEN;
 
 const FindUs = () => {
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: "AIzaSyAkJTESuAIN3p16GxMlglzIpLl6BYUWLgY",
+        googleMapsApiKey: API_TOKEN,
     });
 
     const center = useMemo(
