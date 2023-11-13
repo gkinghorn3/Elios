@@ -35,7 +35,7 @@
 		text-decoration: none;
 
 		&::before {
-			animation-name: wipe-right;
+			animation-name: btn-wipe-right;
 	   		animation-duration: 1.4s;
 		}
 	}
@@ -44,7 +44,7 @@
   }
   
 
-  @keyframes wipe-right {
+  @keyframes btn-wipe-right {
 	
 	from {
 		transform: skew(-45deg) translateX(-150%);

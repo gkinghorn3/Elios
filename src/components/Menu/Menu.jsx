@@ -1,6 +1,7 @@
 import { useInView } from "react-intersection-observer";
 
 import CocktailElement from "./CocktailElement";
+import { BtnMain } from '../../components';
 
 import "./menu.scss";
 
@@ -97,6 +98,7 @@ const Menu = () => {
           />
         ))}
       </div>
+    <BtnMain btnText="See full menu" link="/assets/Menu.pdf" />
     </section>
   );
 };
