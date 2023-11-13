@@ -1,5 +1,5 @@
-import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
-import { useMemo } from "react";
+import { GoogleMap, Marker, useLoadScript, InfoWindow } from "@react-google-maps/api";
+import { useMemo, useState } from "react";
 import "./find-us.scss";
 
 const FindUs = () => {
@@ -12,7 +12,16 @@ const FindUs = () => {
         []
     );
 
-    
+    const [selectedMarker, setSelectedMarker] = useState(null);
+
+    const handleMarkerClick = (marker) => {
+        setSelectedMarker(marker);
+    };
+
+    const handleInfoWindowClose = () => {
+        setSelectedMarker(null);
+    };
+
 
     return (
         <section className="find-us-container">
@@ -29,7 +38,18 @@ const FindUs = () => {
                     zoom={18}
                 >
                     
-                    <Marker position={center} />
+                    <Marker position={center} onClick={() => handleMarkerClick(center)} />
+                    {selectedMarker && (
+                        <InfoWindow
+                            position={selectedMarker}
+                            onCloseClick={handleInfoWindowClose}
+                        >
+                            <div>
+                                <h3>Your Info Window Title</h3>
+                                <p>Your Info Window Content</p>
+                            </div>
+                        </InfoWindow>
+                    )}
                 </GoogleMap>
             )}
         </section>
