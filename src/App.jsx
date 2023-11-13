@@ -1,7 +1,7 @@
 
 
 
-import {Header, About, VenueSummary, Menu} from './components';
+import {Header, About, VenueSummary, Menu, FindUs} from './components';
 
 function App() {
   
@@ -12,6 +12,7 @@ function App() {
       <About/>
       <VenueSummary />
       <Menu />
+      <FindUs />
     </>
   )
 }

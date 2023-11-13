@@ -95,6 +95,7 @@ const Menu = () => {
             name={cocktail.name}
             flavourProfile={cocktail.flavourProfile}
             specs={cocktail.specs}
+            key={cocktail.name}
           />
         ))}
       </div>
