@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 import "./find-us.scss";
 
 // 'AIzaSyAkJTESuAIN3p16GxMlglzIpLl6BYUWLgY'
-const API_TOKEN = process.env.MAPS_API_TOKEN;
+
 
 const FindUs = () => {
-    const API_TOKEN = process.env.MAPS_API_TOKEN;
+    const API_TOKEN = 'AIzaSyAkJTESuAIN3p16GxMlglzIpLl6BYUWLgY';
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: API_TOKEN,
     });
