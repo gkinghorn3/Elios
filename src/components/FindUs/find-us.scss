@@ -4,5 +4,10 @@
     margin: clamp(3rem, 1.4016rem + 6.5574vw, 7rem) 0;
     padding: clamp(2rem, 1.6004rem + 1.6393vw, 3rem) 1rem;
     background: hsl( var(--clr-dark) );
-    height: 30rem;
+    height: fit-content;
+
+    .map-container {
+        height: 20rem;
+        width: 20rem;
+      }
 }
