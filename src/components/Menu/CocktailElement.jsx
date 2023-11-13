@@ -8,8 +8,10 @@ const CocktailElement = ({name, price, flavourProfile, specs}) => {
                 <h3>{name}</h3>
                 <h3>{price}</h3>
             </div>
-            <p className='flavour-profile'>{flavourProfile}</p>
-            <p className='specs'>{specs}</p>
+            <div>
+                <p className='flavour-profile' style={{fontStyle: "italic"}}>{flavourProfile}</p>
+                <p className='specs'>{specs}</p>
+            </div>
         </article>
     )
 
