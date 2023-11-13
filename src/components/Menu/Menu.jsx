@@ -71,7 +71,7 @@ const Menu = () => {
   const [ref2, inView2] = useInView({ triggerOnce: true });
 
   return (
-    <section className="menu-container">
+    <section id='menu' className="menu-container">
       <div className="section-titles">
         <h3>Menu</h3>
         <h2>- Cocktails -</h2>
