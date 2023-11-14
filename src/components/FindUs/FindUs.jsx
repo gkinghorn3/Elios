@@ -2,7 +2,7 @@ import "./find-us.scss";
 
 const FindUs = () => {
     return (
-        <section className="find-us-container" aria-label="Find Us">
+        <section id="find-us" className="find-us-container" aria-label="Find Us">
             <div className="section-titles">
                 <h3>Find Us</h3>
                 <h2>- opening times -</h2>

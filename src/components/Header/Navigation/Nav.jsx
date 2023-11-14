@@ -15,7 +15,7 @@ const Nav = () => {
                 <Link to='menu' smooth={true} duration={1000}>MENU</Link>
             </div>
             <div className='nav-link-container'>
-                <Link to='about' smooth={true} duration={1000}>FIND US</Link>
+                <Link to='find-us' smooth={true} duration={1000}>FIND US</Link>
             </div >
             
             
