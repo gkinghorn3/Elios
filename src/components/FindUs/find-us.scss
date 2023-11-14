@@ -2,12 +2,82 @@
 
 .find-us-container {
     margin: clamp(3rem, 1.4016rem + 6.5574vw, 7rem) 0;
-    padding: clamp(2rem, 1.6004rem + 1.6393vw, 3rem) 1rem;
+    padding: clamp(2rem, 1.2008rem + 3.2787vw, 4rem) 1rem;
     background: hsl( var(--clr-dark) );
     height: fit-content;
 
-    .map-container {
-        height: 20rem;
-        width: 20rem;
+    .find-us-content-container {
+
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
+
+      @media (max-width: 788px) {
+        flex-direction: column;
+        gap: 1.5rem
+        ;
       }
+
+
+      .venue-info {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        font-size: clamp(1.4rem, 1.1602rem + 0.9836vw, 2rem);
+
+        @media (max-width: 788px) {
+          order: 2;
+          align-items: center;
+        }
+
+          .opening-hours-table {
+            display: flex;
+            
+            .opening-days {
+              text-align: right;
+
+            }
+
+            .opening-hours {
+              text-align: right;
+              margin-left: 1rem;
+            }
+          }
+
+          .phone-number {
+
+            a {
+              color:hsl( var(--clr-highlight) );
+              display: inline-flex;
+              
+              span {
+                display: grid;
+                place-items: center;
+              }
+
+              img {
+                width: clamp(1.25rem, 0.7505rem + 2.0492vw, 2.5rem);
+                margin-right: 1rem;
+              
+
+                @media (max-width: 788px) {
+                  
+                  margin-right: .5rem;
+                }
+              }
+            }
+          }
+      }
+
+      .map {
+        max-width: 600px;
+        aspect-ratio: 1;
+      }
+
+    }
+
+
+
 }

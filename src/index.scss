@@ -287,3 +287,23 @@ h1 {
 }
 
 
+
+/* --------------------------- */
+/* credits & copyright         */
+/* --------------------------- */
+
+.credits-copyright {
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0.9;
+
+  &:first-child {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: hsl(var(--clr-highlight));
+    margin-bottom: 1rem;
+  }
+}

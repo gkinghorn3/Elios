@@ -1,62 +1,41 @@
-import { GoogleMap, Marker, useLoadScript, InfoWindow } from "@react-google-maps/api";
-import { useMemo, useState } from "react";
-import dotenv from "dotenv";
 import "./find-us.scss";
 
-// 'AIzaSyAkJTESuAIN3p16GxMlglzIpLl6BYUWLgY'
-
-
 const FindUs = () => {
-    const API_TOKEN = 'AIzaSyAkJTESuAIN3p16GxMlglzIpLl6BYUWLgY';
-    const { isLoaded } = useLoadScript({
-        googleMapsApiKey: API_TOKEN,
-    });
-
-    const center = useMemo(
-        () => ({ lat: 55.95341924477354, lng: -3.197819931188319 }),
-        []
-    );
-
-    const [selectedMarker, setSelectedMarker] = useState(null);
-
-    const handleMarkerClick = (marker) => {
-        setSelectedMarker(marker);
-    };
-
-    const handleInfoWindowClose = () => {
-        setSelectedMarker(null);
-    };
-
-
     return (
-        <section className="find-us-container">
+        <section className="find-us-container" aria-label="Find Us">
             <div className="section-titles">
                 <h3>Find Us</h3>
                 <h2>- opening times -</h2>
             </div>
-            {!isLoaded ? (
-                <h1>Loading...</h1>
-            ) : (
-                <GoogleMap
-                    mapContainerClassName="map-container"
-                    center={center}
-                    zoom={18}
-                >
-                    
-                    <Marker position={center} onClick={() => handleMarkerClick(center)} />
-                    {selectedMarker && (
-                        <InfoWindow
-                            position={selectedMarker}
-                            onCloseClick={handleInfoWindowClose}
-                        >
-                            <div>
-                                <h3>Your Info Window Title</h3>
-                                <p>Your Info Window Content</p>
-                            </div>
-                        </InfoWindow>
-                    )}
-                </GoogleMap>
-            )}
+            <div className="find-us-content-container">
+                <div className="venue-info">
+                    <div className="opening-hours-table">
+                        <p className="opening-days">
+                            <span aria-label="Opening days">Sunday - Thursday:</span> <br />
+                            <span aria-label="Opening days">Friday:</span> <br />
+                            <span aria-label="Opening days">Saturday:</span> <br />
+
+                        </p>
+                        <p className="opening-hours">
+                            <span aria-label="Opening hours">3pm - 3am</span> <br />
+                            <span aria-label="Opening hours">2pm - 3am</span> <br />
+                            <span aria-label="Opening hours">12pm - 3am</span> <br />
+                        </p>
+                    </div>
+                    <div className="phone-number">
+                        <a href="tel:01312253408" aria-label="Phone number"><span><img src="/icons/phone-icon.png" alt="Phone icon" /></span>01312253408</a>
+
+                    </div>
+                </div>
+            <iframe className="map"
+                title="Google Maps"
+                style={{border:0}}
+                loading="lazy"
+                src="https://www.google.com/maps/embed/v1/place?q=elios%20edinburgh%20&key=AIzaSyBbYedyRNVJlRpCSwxW0t3W-fWsYaRk6wM"
+                aria-label="Google Maps"
+            ></iframe>
+            </div>
+     
         </section>
     );
 };
