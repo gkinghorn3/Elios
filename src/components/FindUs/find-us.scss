@@ -23,6 +23,7 @@
       .venue-info {
         display: flex;
         flex-direction: column;
+        // flex: 0%;
         align-items: end;
         gap: 1rem;
         font-size: clamp(1.4rem, 1.1602rem + 0.9836vw, 2rem);
