@@ -23,7 +23,11 @@ const FindUs = () => {
                         </p>
                     </div>
                     <div className="phone-number">
-                        <a href="tel:01312253408" aria-label="Phone number"><span><img src="/icons/phone-icon.png" alt="Phone icon" /></span>01312253408</a>
+                        <a href="tel:01312253408" aria-label="Phone number">01312253408</a>
+
+                    </div>
+                    <div className="email">
+                        <a href="mailto:info@eliosedinburgh.com" aria-label="Phone number">info@eliosedinburgh.com</a>
 
                     </div>
                 </div>
