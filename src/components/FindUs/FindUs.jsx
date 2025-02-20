@@ -27,10 +27,7 @@ const FindUs = () => {
             </a>
           </div>
           <div className="email">
-            <a
-              href="mailto:elios@partners.collinsbookings.com"
-              aria-label="email number"
-            >
+            <a href="mailto:info@eliosedinburgh.com" aria-label="email">
               elios@partners.collinsbookings.com
             </a>
           </div>
