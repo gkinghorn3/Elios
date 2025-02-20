@@ -1,18 +1,13 @@
+import { useInView } from "react-intersection-observer";
 
-import { useInView } from 'react-intersection-observer';
-
-import BtnMain from '../BtnMain/BtnMain';
-
+import BtnMain from "../BtnMain/BtnMain";
 
 import "./about.scss";
 
 const About = () => {
+  const [ref, inView] = useInView({ triggerOnce: true });
+  const [ref2, inView2] = useInView({ triggerOnce: true });
 
-   const [ref, inView] = useInView({triggerOnce: true});
-   const [ref2, inView2] = useInView({triggerOnce: true});
-   
-
-   
   return (
     <section className=" about-container">
       <div className="section-titles">
@@ -38,16 +33,24 @@ const About = () => {
           </p>
         </div>
         <div className="about-image-container">
-        
-          <img ref={ref} src="/images/zombie1.webp" className={`first-img ${inView ? 'first-img-animation' : ''}`}/>
-          <img ref={ref2} src="/images/mural.webp" className={`second-img ${inView2 ? 'second-img-animation' : ''}`} />
+          <img
+            ref={ref}
+            src="/images/zombie1.webp"
+            className={`first-img ${inView ? "first-img-animation" : ""}`}
+          />
+          <img
+            ref={ref2}
+            src="/images/mural.webp"
+            className={`second-img ${inView2 ? "second-img-animation" : ""}`}
+          />
         </div>
       </div>
-      <BtnMain btnText="book now" link='https://elios.covergenie.uk/booking/elios-edinburgh' />
+      <BtnMain
+        btnText="book now"
+        link="https://bookings.designmynight.com/book?venue_id=6630f8138ce9bb509a3fedf8&source=partner"
+      />
     </section>
   );
 };
 
 export default About;
-
-
