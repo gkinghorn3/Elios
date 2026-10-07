@@ -47,7 +47,7 @@ const About = () => {
       </div>
       <BtnMain
         btnText="book now"
-        link="https://bookings.designmynight.com/book?venue_id=6630f8138ce9bb509a3fedf8&source=partner"
+        link="https://www.sevenrooms.com/explore/elios/reservations/create/search"
       />
     </section>
   );
