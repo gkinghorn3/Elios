@@ -7,7 +7,7 @@ const Nav = () => {
     <nav>
       <div className="nav-link-container">
         <a
-          href="https://bookings.designmynight.com/book?venue_id=6630f8138ce9bb509a3fedf8&source=partner"
+          href="https://www.sevenrooms.com/explore/elios/reservations/create/search"
           target="blank"
         >
           BOOK
